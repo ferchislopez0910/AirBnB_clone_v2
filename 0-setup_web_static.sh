@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Install Nginx already installed
 # Write a Bash script that sets up your web servers for the deployment of web_static. It must:
-
 sudo apt-get -y update
 sudo apt-get -y install nginx
 mkdir -p /data/
