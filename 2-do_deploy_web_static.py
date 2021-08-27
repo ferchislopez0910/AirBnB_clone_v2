@@ -10,7 +10,7 @@ env.hosts = ["54.226.230.158", "34.74.231.223"]
 
 def do_deploy(archive_path):
     """
-	Distributes an archive to a web server.
+        Distributes an archive to a web server.
     """
     if os.path.isfile(archive_path) is False:
         return False
@@ -31,7 +31,8 @@ def do_deploy(archive_path):
     if run("rm /tmp/{}".format(archivo)).failed is True:
         return False
     if run("mv /data/web_static/releases/{}/web_static/* "
-           "/data/web_static/releases/{}/".format(nombre, nombre)).failed is True:
+           "/data/web_static/releases/{}/".format(
+               nombre, nombre)).failed is True:
         return False
     if run("rm -rf /data/web_static/releases/{}/web_static".
            format(nombre)).failed is True:
